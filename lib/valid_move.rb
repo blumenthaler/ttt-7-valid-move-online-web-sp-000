@@ -13,6 +13,8 @@ end
 def valid_move?(board, index)
   if board[index].to_i >= 8
     false
+  elsif board[index].to_i <= 0
+    false 
   elsif position_taken?(board, index) == true
     false
   elsif position_taken?(board, index) == false
